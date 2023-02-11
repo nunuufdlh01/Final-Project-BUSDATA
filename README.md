@@ -36,11 +36,11 @@ pip install scipy
 - Kemungkinan fitur **Prior_purchases** dan **Discount_offered** memiliki data yang akan **outlier** berdasarkan perhitungan IQR karena masing-masing memiliki **nilai max** yang melewati **batas max** pada IQR, yaitu Q3 + (1.5 x IQR).
 - Berdasarkan pada perbedaan nilai mean dan median (mean > median), **Discount_offered** dan **Prior_purchases** diprediksi akan memiliki distribusi **positively skewed**.
 - Pada fitur kategorikal:
-    1. Kategori Warehouse_block dari 5 blok, blok **F** mendominasi sekitar **33%**. 
-    2. Kategori Mode_of_shipment dari 3 jenis armada pengiriman, jalur **laut (Ship)** mendominasi sekitar **67,8%**.
-    3. Kategori Product_importance dari 3 kategori, kategori **Low** mendominasi sekitar **48%**.
-    4. Walaupun kategori **Gender** didominasi oleh **Female**, perbedaan jumlahnya **tidak signifikan** dengan **Male**. Oleh sebab itu, fitur **Gender tidak berpengaruh signifikan** terhadap model yang akan dibuat.
-    5. Berdasarkan fitur Reached.on.Time_Y.N dari jumlah total **10.999** produk, sebanyak **6563** produk tidak sampai tepat waktu
+    1). Kategori Warehouse_block dari 5 blok, blok **F** mendominasi sekitar **33%**. 
+    2). Kategori Mode_of_shipment dari 3 jenis armada pengiriman, jalur **laut (Ship)** mendominasi sekitar **67,8%**.
+    3). Kategori Product_importance dari 3 kategori, kategori **Low** mendominasi sekitar **48%**.
+    4). Walaupun kategori **Gender** didominasi oleh **Female**, perbedaan jumlahnya **tidak signifikan** dengan **Male**. Oleh sebab itu, fitur **Gender tidak berpengaruh signifikan** terhadap model yang akan dibuat.
+    5). Berdasarkan fitur Reached.on.Time_Y.N dari jumlah total **10.999** produk, sebanyak **6563** produk tidak sampai tepat waktu
 
 
 ### Univariate Analysis
