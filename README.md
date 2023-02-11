@@ -1,5 +1,7 @@
 # E-Commerce Shipping Data
 
+![ecommerce-shipping-1](https://user-images.githubusercontent.com/89932073/218234363-9b211cc4-900e-457a-ac9f-0286129bc86d.png)
+
 Dataset yang digunakan memiliki 10.999 baris dari 12 fitur yang tersedia.
 
 Data memiliki beberapa informasi sebagai berikut:
