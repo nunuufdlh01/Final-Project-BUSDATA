@@ -89,7 +89,7 @@ pip install scipy
         2. Memiliki distribusi right skewed dengan heavy-tail.
         3. Jika menggunakan IQR, pengurangan data menjadi ~30% sehingga banyak informasi yang terhapus sedangkan fitur ini memiliki nilai korelasi yang tinggi dengan fitur target diantara fitur lainnya.
 
-#### Featuere Transformation
+#### Feature Transformation
 
 Dalam Featuere Transformation ini semua diselaraskan menggunakan normalisasi minmax.
 
