@@ -68,14 +68,16 @@ pip install scipy
     1. Hubungan antara **Reached.on.time** dengan **Discount_offered**, terlihat **sebagian besar data** berada pada nilai Reached.on.time 1 yang artinya **terlambat** dan **hanya** barang yang di **discount dibawah sekitar 10%** yang **tidak** mengalami keterlambatan.
     2. **Weight_in_gms** dengan **Discount_offered**, dimana terlihat barang-barang yang diberi **discount kebanyakan **dibawah** beban **4000 gram**, dan beban pada **4001-6000 gram** hanya mendapat **discount maksimal 10%** padahal memiliki frekuensi (jumlah barang) yang paling tinggi.
     3. **Weight_in_gms**, **Reached.on.time**, dan **Cost_of_the_Product**. Pada area sekitar **median Weight_in_gms** dimana memiliki **frekuensi terendah**, data Reached.on.time tercatat **terlambat semua** dan data **Cost_of_the_Product relatif sangat tinggi**.
-    
-## Data Cleansing
-### Missing, Invalid, & Duplicate Value
+
+## Data Pre-Processing
+
+### Data Cleansing
+#### Missing, Invalid, & Duplicate Value
 - Setelah menggunakan **df.info()** diketahui bahwa dataset memiliki 10.999 baris data dari 12 variabel/fitur yang tersedia, **tidak terdapat missing** values dari masing-masing fitur.
 - Semua tipe data telah sesuai, hanya saja pada kolom **Warehouse_block** berdasarkan keterangan dataset Kaggle yang semestinya adalah blok **A, B, C, D, E** menjadi **A, B, C, D, F**. 
 - Handle **“invalid”** berdasarkan keterangan dataset Kaggle, nama warehouse **F** dirubah menjadi warehouse **E** pada kolom **Warehouse_block**.
 
-### Outliers
+#### Outliers
 1. Handle outliers kolom **Prior_purchases**
     - Dalam menghandle outlier menggunakan Interquartile (IQR). IQR sendiri adalah jarak antara kuartil 3 (Q3) dan kuartil 1 (Q1) dalam sebuah distribusi data. Memiliki sifat robust terhadap outliers, bahkan mampu mengidentifikasi dimana letak outlier berada.
     - Dalam menghandle outliers digunakan metode ini karena pengurangan jumlah data yang **tidak terlalu signifikan** yaitu 9%
@@ -87,10 +89,11 @@ pip install scipy
         2. Memiliki distribusi right skewed dengan heavy-tail.
         3. Jika menggunakan IQR, pengurangan data menjadi ~30% sehingga banyak informasi yang terhapus sedangkan fitur ini memiliki nilai korelasi yang tinggi dengan fitur target diantara fitur lainnya.
 
-### Featuere Transformation
+#### Featuere Transformation
 
 Dalam Featuere Transformation ini semua diselaraskan menggunakan normalisasi minmax.
-### Label & One Hot Encoding
+
+#### Label & One Hot Encoding
 - Label Encoding :
     - Product Importance 
 
@@ -100,17 +103,18 @@ karena bersifat kategorik ordinal.
     - Warehouse Block
 
 karena tidak ordinal dan memiliki value lebih dari dua.
-### Class Imbalance
+
+#### Class Imbalance
 
 Tidak terjadi class imbalance karena perbandingannya sekitar 60 : 40 saja, sehingga dapat dianggap normal/tidak imbalance.
-## Feature Engineering
-### Feature selection (membuang feature) : 
+
+### Feature Engineering
+#### Feature selection (membuang feature) : 
 - Gender 
 - ID
-### Feature extraction (membuat feature baru dari feature yang sudah ada) :
-
+#### Feature extraction (membuat feature baru dari feature yang sudah ada) :
 Feature extraction (membuat feature baru dari feature yang sudah ada) karena semua fitur dianggap **sudah sesuai** dan tidak ada fitur kategorikal yang memiliki nilai unik yang banyak, maka feature extraction tidak diperlukan.
-### Feature Tambahan : 
+#### Feature Tambahan : 
 - Mulai Pengiriman;
 - Jarak Pengiriman;
 - Destinasi pengiriman; 
