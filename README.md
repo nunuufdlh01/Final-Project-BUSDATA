@@ -57,7 +57,7 @@ pip install scipy
     2. Dalam barplot **Mode_of_Shipment**, pelanggan lebih banyak memilih moda transportasi pengiriman **kapal**.
     3. Dalam barplot **Product_importance**, pelanggan lebih memilih prioritas **low & medium**.
  
-## Multivariate Analysis
+### Multivariate Analysis
 - Pada heatmap korelasi diperoleh beberapa insight:
     1. **Reached_on_time** memiliki **korelasi positif** dengan **Discount_offered** sebesar **0.40**, sehingga kemungkinan semakin tinggi discount yang diberikan akan semakin memungkinkan untuk paket datang terlambat.
     2. **Reached_on_time** memiliki **korelasi negatif** dengan **Weight_in_gms** sebesar **-0.27**, sehingga kemungkinan semakin berat beban yang diangkut maka semakin memungkinkan untuk paket datang tepat waktu
