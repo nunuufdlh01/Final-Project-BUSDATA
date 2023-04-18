@@ -119,4 +119,24 @@ Feature extraction (membuat feature baru dari feature yang sudah ada) karena sem
 - Jarak Pengiriman;
 - Destinasi pengiriman; 
 - Tracking perpindahan barang per Warehouse;
-- No. Resi.    
+- No. Resi.
+
+## Machine Learning Evaluation &
+Supervised Learning
+
+### Model Evaluation
+- Dari semua eksperimen model yang dilakukan, dapat disimpulkan bahwa model yang memiliki performa baik dalam 
+mendeteksi False Negative yaitu Logistic Regression dan Random Forest. Untuk selanjutnya, interpretasi dari 
+Logistic Regression akan digunakan untuk menarik business insight dan business decision.
+- Feature Importance yang diberikan dari hasil fitting memberikan simpulan yang sama yaitu 2 fitur yang memiliki peran 
+besar dalam status ketepatan waktu suatu pesanan sampai di tangan pelanggan, yaitu Discount_offered dan 
+Weight_in_gms.
+### Business Insight & Decision
+- Banyaknya keterlambatan yang disebabkan oleh diskon, dapat diatasi dengan pembatasan user yang dapat menggunakan diskon per hari. 
+Pembatasan ini dilakukan untuk menjaga alur pengiriman agar tidak terkumpul terlalu banyak pada hari tersebut. Jika sudah memenuhi
+kuota, user dapat menggunakan diskon di hari berikutnya. (akan dilakukan riset untuk memastikan revenue tidak menurun).
+- Sedangkan untuk keterlambatan yang disebabkan oleh berat paket, dapat diatasi dengan penambahan estimasi pengiriman yang lebih panjang
+pada paket yang berat dibandingkan paket yang ringan. Penambahan estimasi ini disebabkan paket yang berat memerlukan penanganan yang 
+lebih khusus. Dengan adanya estimasi yang lebih panjang, diharapkan ‘ekspektasi’ customer terhadap pengiriman paket lebih realistis.
+- Dalam upaya menjaga kepercayaan & loyalitas customer, maka perusahaan dapat memberikan kompensasi atas paket yang masih terlambat 
+setelah melakukan perbaikan dari sistem pengiriman.
