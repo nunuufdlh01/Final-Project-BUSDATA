@@ -121,8 +121,7 @@ Feature extraction (membuat feature baru dari feature yang sudah ada) karena sem
 - Tracking perpindahan barang per Warehouse;
 - No. Resi.
 
-## Machine Learning Evaluation &
-Supervised Learning
+## Machine Learning Evaluation & Supervised Learning
 
 ### Model Evaluation
 - Dari semua eksperimen model yang dilakukan, dapat disimpulkan bahwa model yang memiliki performa baik dalam 
